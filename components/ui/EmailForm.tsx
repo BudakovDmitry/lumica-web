@@ -9,7 +9,7 @@ interface EmailFormProps {
 
 // 🔴 ВАЖЛИВО: Замініть цей рядок на ваше посилання з Google Apps Script
 // Якщо залишити порожнім, форма просто імітуватиме успішну відправку
-const GOOGLE_SCRIPT_URL = ""; 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyzwzZSQ7IrwxChpIpMKwFh0K1_bIvcpo7ybmgO_fwKv5oJ4CQ6OWJZ_bxboj99aXIx/exec";
 
 const EmailForm: React.FC<EmailFormProps> = ({ id, buttonText, fullWidth = false }) => {
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ id, buttonText, fullWidth = false
     setStatus('loading');
     
     // Якщо URL не налаштовано, імітуємо успіх (для демо)
-    if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === "") {
+    if (!GOOGLE_SCRIPT_URL) {
       console.log(`Simulating submission for: ${email} from source: ${id}`);
       setTimeout(() => {
         setStatus('success');
