@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             </ScrollReveal>
 
             <ScrollReveal animation="fade-up" delay={400}>
-              <div className="bg-white/60 backdrop-blur-sm border border-white p-6 rounded-3xl shadow-sm mb-8 inline-block w-full max-w-md hover:shadow-md transition-shadow duration-300">
+              <div className="bg-white/60 backdrop-blur-sm border border-white p-6 rounded-3xl shadow-sm mb-8 inline-block w-full max-w-xl hover:shadow-md transition-shadow duration-300">
                 <div className="flex items-center gap-2 mb-3 text-sm font-medium text-emerald-700">
                   <Sparkles size={16} className="animate-pulse" />
                   <span>Ми вже майже завершили розробку</span>
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                 <p className="text-lumica-dark mb-4 text-sm">
                   Залиш email — і ти отримаєш ранній доступ до Lumica одним із перших.
                 </p>
-                <EmailForm id="hero-email" buttonText="Отримати ранній доступ" />
+                <EmailForm id="hero-email" buttonText="Отримати ранній доступ" fullWidth />
               </div>
             </ScrollReveal>
           </div>

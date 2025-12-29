@@ -84,7 +84,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ id, buttonText, fullWidth = false
             if(status === 'error') setStatus('idle');
           }}
           placeholder="tviy@email.com"
-          className={`w-full px-5 py-3.5 bg-gray-50 border ${status === 'error' ? 'border-red-300 focus:ring-red-200' : 'border-gray-200 focus:ring-lumica-green'} rounded-xl focus:outline-none focus:ring-4 transition-all text-lumica-dark placeholder-gray-400 text-base`}
+          className={`w-full h-[52px] px-5 bg-gray-50 border ${status === 'error' ? 'border-red-300 focus:ring-red-200' : 'border-gray-200 focus:ring-lumica-green'} rounded-xl focus:outline-none focus:ring-4 transition-all text-lumica-dark placeholder-gray-400 text-base`}
         />
         {status === 'error' && (
            <div className="absolute -bottom-7 left-2 flex items-center gap-1 text-sm text-red-600 font-medium animate-in slide-in-from-top-1">
@@ -96,7 +96,7 @@ const EmailForm: React.FC<EmailFormProps> = ({ id, buttonText, fullWidth = false
       <button
         type="submit"
         disabled={status === 'loading'}
-        className={`bg-lumica-dark text-white px-6 py-3.5 rounded-xl font-medium hover:bg-black transition-colors flex items-center justify-center gap-2 text-base ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''}`}
+        className={`bg-lumica-dark text-white h-[52px] px-6 rounded-xl font-medium hover:bg-black transition-colors flex items-center justify-center gap-2 text-base sm:w-auto w-full whitespace-nowrap ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''}`}
       >
         {status === 'loading' ? 'Обробка...' : buttonText}
         {!status && <ArrowRight size={18} />}
