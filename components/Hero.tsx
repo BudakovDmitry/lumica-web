@@ -3,6 +3,7 @@ import EmailForm from './ui/EmailForm';
 import PhoneMockup from './ui/PhoneMockup';
 import { Sparkles } from 'lucide-react';
 import ScrollReveal from './ui/ScrollReveal';
+import { phoneMockups } from '@/assets/phone-mockups';
 
 const Hero: React.FC = () => {
   return (
@@ -53,7 +54,7 @@ const Hero: React.FC = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[105%] bg-gradient-to-b from-lumica-peach/30 to-lumica-green/30 rounded-full blur-3xl -z-10 animate-breathe"></div>
                 
                 <PhoneMockup 
-                  src="lumica-dashboard.png" 
+                  src={phoneMockups.dashboard} 
                   alt="Lumica Dashboard Screen" 
                   className="rotate-[-2deg] hover:rotate-0 transition-transform duration-700 hover:scale-[1.02]"
                 />

@@ -2,6 +2,7 @@ import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import PhoneMockup from './ui/PhoneMockup';
 import ScrollReveal from './ui/ScrollReveal';
+import { phoneMockups } from '@/assets/phone-mockups';
 
 const Philosophy: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const Philosophy: React.FC = () => {
             <ScrollReveal animation="fade-in" delay={200} className="w-[260px] md:w-[280px]">
               <div className="animate-float-delayed">
                 <PhoneMockup 
-                  src="lumica-silence.png" 
+                  src={phoneMockups.silence} 
                   alt="1 Minute Silence Practice Screen"
                   className="shadow-[0_20px_50px_-12px_rgba(16,185,129,0.25)]" 
                 />

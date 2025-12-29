@@ -1,6 +1,7 @@
 import React from 'react';
 import PhoneMockup from './ui/PhoneMockup';
 import ScrollReveal from './ui/ScrollReveal';
+import { phoneMockups } from '@/assets/phone-mockups';
 
 const TargetAudience: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const TargetAudience: React.FC = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 animate-pulse" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-lumica-green/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 animate-blob" />
 
-          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center px-16">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Для кого Lumica</h2>
               <p className="text-gray-300 text-lg mb-8">
@@ -42,7 +43,7 @@ const TargetAudience: React.FC = () => {
                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl transform scale-110 animate-breathe"></div>
                <div className="w-[260px] md:w-[280px] relative z-10 animate-float">
                  <PhoneMockup 
-                    src="lumica-onboarding.png" 
+                    src={phoneMockups.onboarding} 
                     alt="Lumica Onboarding Screen"
                     className="rotate-3 hover:rotate-0 transition-transform duration-500"
                  />
